@@ -1,0 +1,32 @@
+<ul>
+  <li *ngFor="let design of designs">
+    <a routerLink="/design/design.id">
+      <img [src]="design.imageUrl" [alt]="design.name" />
+      <div class="content">
+        <div class="name">
+          {{ design.name }}
+        </div>
+      </div>
+      <div class="product-item-footer">
+        <div class="manufacturer">
+          {{ design.manufacturer }}
+        </div>
+        <br />
+        <span>
+          {{ design.price | currency : "₹" }}
+        </span>
+      </div>
+      <div class="stars">
+        <star-rating
+          [value]="design.stars"
+          [totalstars]="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="22px"
+          [readonly]="true"
+        >
+        </star-rating>
+      </div>
+    </a>
+  </li>
+</ul>
