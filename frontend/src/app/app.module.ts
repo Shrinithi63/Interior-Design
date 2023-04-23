@@ -9,9 +9,10 @@ import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component';
 import { DesignPageComponent } from './components/pages/design-page/design-page.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, DesignPageComponent, TagsComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, DesignPageComponent, TagsComponent, CartPageComponent],
   imports: [BrowserModule, AppRoutingModule, RatingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -26,7 +26,7 @@ export const sample_designs: Design[] = [
     manufacturer: 'Intellozene',
     stars: 4.1,
     imageUrl: 'assets/design3.jpg',
-    tags: ['Home Decor', 'Wall decor', 'Pooja Room'],
+    tags: ['Home Decor', 'Pooja Room'],
   },
   {
     id: '4',
@@ -44,7 +44,7 @@ export const sample_designs: Design[] = [
     manufacturer: 'walia traderss',
     stars: 3.5,
     imageUrl: 'assets/design5.jpg',
-    tags: ['Wall decor', 'Wall shelve', 'Living Room'],
+    tags: ['Wall decor', 'Living Room'],
   },
   {
     id: '6',
@@ -62,8 +62,7 @@ export const sample_tags: Tag[] = [
   { name: 'Wall Mount', count: 2 },
   { name: 'TV Stand', count: 1 },
   { name: 'Living Room', count: 5 },
-  { name: 'Wall decor', count: 3 },
-  { name: 'Wall Shelve', count: 1 },
+  { name: 'Wall decor', count: 2 },
   { name: 'Pooja Room', count: 1 },
   { name: 'Glass Decor', count: 1 },
   { name: 'Home Decor', count: 2 },
