@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+  [visible]="!design.id"
+  notFoundMessage="Design not found"
+  resetLinkText="Go to Home"
+></app-not-found>
+<div *ngIf="design.id" class="container">
   <img [src]="design.imageUrl" [alt]="design.name" />
 
   <div class="details">

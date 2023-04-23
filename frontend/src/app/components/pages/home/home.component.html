@@ -1,5 +1,9 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found
+  [visible]="!designs || !designs.length"
+  resetLinkText="Search Again"
+></app-not-found>
 <ul>
   <li *ngFor="let design of designs">
     <a routerLink="/design/{{ design.id }}">
