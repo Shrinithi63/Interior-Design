@@ -8,13 +8,13 @@ import { CartItem } from '../shared/models/CartItem';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: Cart = new Cart();
-  private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(
-    this.constructor()
-  );
+  private cart: Cart = this.getCartFromLocalStorage();
+  private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
+
   addToCart(design: Design): void {
     let cartItem = this.cart.items.find((item) => item.design.id === design.id);
     if (cartItem) return;
+
     this.cart.items.push(new CartItem(design));
     this.setCartToLocalStorage();
   }
