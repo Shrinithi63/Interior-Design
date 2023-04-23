@@ -10,9 +10,11 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { DesignPageComponent } from './components/pages/design-page/design-page.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { TitleComponent } from './components/partials/title/title.component';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, DesignPageComponent, TagsComponent, CartPageComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, DesignPageComponent, TagsComponent, CartPageComponent, TitleComponent, NotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, RatingModule],
   providers: [],
   bootstrap: [AppComponent],
