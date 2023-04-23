@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Design } from '../shared/models/design';
-import { sample_designs } from 'src/data';
-
+import { sample_designs, sample_tags } from 'src/data';
+import { Tag } from '../shared/models/Tag';
 @Injectable({
   providedIn: 'root',
 })
@@ -21,5 +21,15 @@ export class DesignService {
     return (
       this.getAll().find((design) => design.id == designId) ?? new Design()
     );
+  }
+
+  getAllTags(): Tag[] {
+    return sample_tags;
+  }
+
+  getAllDesignsByTag(tag: string): Design[] {
+    return tag === 'All'
+      ? this.getAll()
+      : this.getAll().filter((design) => design.tags?.includes(tag));
   }
 }

@@ -19,6 +19,8 @@ export class HomeComponent {
         this.designs = this.DesignService.getAllDesignsBySearchTerm(
           params.searchTerm
         );
+      else if (params.tag)
+        this.designs = this.DesignService.getAllDesignsByTag(params.tag);
       else {
         this.designs = DesignService.getAll();
       }

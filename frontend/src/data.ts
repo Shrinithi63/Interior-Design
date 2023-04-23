@@ -1,4 +1,5 @@
 import { Design } from './app/shared/models/design';
+import { Tag } from './app/shared/models/Tag';
 export const sample_designs: Design[] = [
   {
     id: '1',
@@ -7,7 +8,7 @@ export const sample_designs: Design[] = [
     manufacturer: 'Shiraz Handicrafts',
     stars: 4.2,
     imageUrl: 'assets/design1.jpg',
-    tags: ['Wall Mount', 'Wall decoration', 'Living Room'],
+    tags: ['Wall Mount', 'Wall decor', 'Living Room'],
   },
   {
     id: '2',
@@ -16,7 +17,7 @@ export const sample_designs: Design[] = [
     manufacturer: '	shreeji venalicium solution',
     stars: 4.3,
     imageUrl: 'assets/design2.jpg',
-    tags: ['Living Room', 'Glass decor', 'mirror design'],
+    tags: ['Living Room', 'Glass Decor', 'Mirror Design'],
   },
   {
     id: '3',
@@ -54,4 +55,17 @@ export const sample_designs: Design[] = [
     imageUrl: 'assets/design6.jpg',
     tags: ['Wall Mount', 'TV Stand', 'Living Room'],
   },
+];
+
+export const sample_tags: Tag[] = [
+  { name: 'All', count: 6 },
+  { name: 'Wall Mount', count: 2 },
+  { name: 'TV Stand', count: 1 },
+  { name: 'Living Room', count: 5 },
+  { name: 'Wall decor', count: 3 },
+  { name: 'Wall Shelve', count: 1 },
+  { name: 'Pooja Room', count: 1 },
+  { name: 'Glass Decor', count: 1 },
+  { name: 'Home Decor', count: 2 },
+  { name: 'Mirror Design', count: 1 },
 ];

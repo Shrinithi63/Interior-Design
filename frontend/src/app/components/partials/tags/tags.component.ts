@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DesignService } from 'src/app/services/design.service';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-tags',
@@ -7,7 +8,10 @@ import { DesignService } from 'src/app/services/design.service';
   styleUrls: ['./tags.component.css'],
 })
 export class TagsComponent implements OnInit {
-  constructor(designService: DesignService) {}
+  tags?: Tag[];
+  constructor(designService: DesignService) {
+    this.tags = designService.getAllTags();
+  }
 
   ngOnInit(): void {}
 }
