@@ -16,4 +16,10 @@ export class DesignService {
       design.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }
+
+  getDesignById(designId: string): Design {
+    return (
+      this.getAll().find((design) => design.id == designId) ?? new Design()
+    );
+  }
 }

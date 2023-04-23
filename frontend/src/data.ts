@@ -1,5 +1,4 @@
 import { Design } from './app/shared/models/design';
-
 export const sample_designs: Design[] = [
   {
     id: '1',
