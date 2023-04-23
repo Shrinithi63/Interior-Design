@@ -1,6 +1,7 @@
+<app-search></app-search>
 <ul>
   <li *ngFor="let design of designs">
-    <a routerLink="/design/design.id">
+    <a routerLink="/design/{{ design.id }}">
       <img [src]="design.imageUrl" [alt]="design.name" />
       <div class="content">
         <div class="name">

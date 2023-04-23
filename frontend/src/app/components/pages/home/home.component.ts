@@ -19,7 +19,9 @@ export class HomeComponent {
         this.designs = this.DesignService.getAllDesignsBySearchTerm(
           params.searchTerm
         );
+      else {
+        this.designs = DesignService.getAll();
+      }
     });
-    this.designs = DesignService.getAll();
   }
 }
