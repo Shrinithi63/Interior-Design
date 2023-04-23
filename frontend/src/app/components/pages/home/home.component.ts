@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Design } from 'src/app/shared/models/design';
 import { DesignService } from '../../../services/design.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,16 @@ import { DesignService } from '../../../services/design.service';
 })
 export class HomeComponent {
   designs: Design[] = [];
-  constructor(private DesignService: DesignService) {
+  constructor(
+    private DesignService: DesignService,
+    activatedRoute: ActivatedRoute
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      if (params.searchTerm)
+        this.designs = this.DesignService.getAllDesignsBySearchTerm(
+          params.searchTerm
+        );
+    });
     this.designs = DesignService.getAll();
   }
 }

@@ -11,7 +11,7 @@ export class DesignService {
     return sample_designs;
   }
 
-  getAllFoodsBySearchTerm(searchTerm: string) {
+  getAllDesignsBySearchTerm(searchTerm: string) {
     return this.getAll().filter((design) =>
       design.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
