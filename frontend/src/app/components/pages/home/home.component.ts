@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Design } from 'src/app/shared/models/design';
 import { DesignService } from '../../../services/design.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -14,16 +15,20 @@ export class HomeComponent {
     private DesignService: DesignService,
     activatedRoute: ActivatedRoute
   ) {
+    let designsObservable: Observable<Design[]>;
+
     activatedRoute.params.subscribe((params) => {
       if (params.searchTerm)
-        this.designs = this.DesignService.getAllDesignsBySearchTerm(
+        designsObservable = this.DesignService.getAllDesignsBySearchTerm(
           params.searchTerm
         );
       else if (params.tag)
-        this.designs = this.DesignService.getAllDesignsByTag(params.tag);
-      else {
-        this.designs = DesignService.getAll();
-      }
+        designsObservable = this.DesignService.getAllDesignsByTag(params.tag);
+      else designsObservable = DesignService.getAll();
+
+      designsObservable.subscribe((serverDesigns) => {
+        this.designs = serverDesigns;
+      });
     });
   }
 }

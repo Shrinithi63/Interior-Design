@@ -18,7 +18,10 @@ export class DesignPageComponent {
     private cartService: CartService
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params.id) this.design = designService.getDesignById(params.id);
+      if (params.id)
+        designService.getDesignById(params.id).subscribe((serverDesign) => {
+          this.design = serverDesign;
+        });
     });
   }
 
