@@ -66,3 +66,34 @@ export const sample_tags: any[] = [
   { name: "Home Decor", count: 2 },
   { name: "Mirror Design", count: 1 },
 ];
+
+export const sample_users: any[] = [
+  {
+    name: "Shrinithi",
+    email: "shri@gmail.com",
+    password: "shri@123",
+    address: "Tirunelveli",
+    isAdmin: true,
+  },
+  {
+    name: "Kaavya",
+    email: "kaavya@gmail.com",
+    password: "kaavya@123",
+    address: "Madurai",
+    isAdmin: false,
+  },
+  {
+    name: "Krish",
+    email: "krish@gmail.com",
+    password: "krish@123",
+    address: "Chennai",
+    isAdmin: false,
+  },
+  {
+    name: "Ajay",
+    email: "ajay@gmail.com",
+    password: "ajay@123",
+    address: "Tuticorin",
+    isAdmin: false,
+  },
+];
