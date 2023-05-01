@@ -35,7 +35,7 @@ export const sample_designs: Design[] = [
     manufacturer: 'TIED RIBBONS',
     stars: 3.8,
     imageUrl: 'assets/design4.jpg',
-    tags: ['Home decor', 'Party', 'Living Room'],
+    tags: ['Home Decor', 'Party', 'Living Room'],
   },
   {
     id: '5',
